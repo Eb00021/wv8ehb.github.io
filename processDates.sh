@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_last_commit_date="$(git log -1 --date=format:"%B %-d\, %Y.")"
+git_last_commit_date="$(git log -1 --format=%cd --date=format:"%B %-d, %Y.")"
 echo "Git last commit date: $git_last_commit_date"
 
 html_files="$(find . -type f -name "*.html")"
