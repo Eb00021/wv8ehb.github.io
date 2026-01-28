@@ -1,5 +1,7 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
+  const pathPrefix = process.env.PATH_PREFIX || "";
+
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("styles.css");
   eleventyConfig.addPassthroughCopy("javascripts");
@@ -32,5 +34,6 @@ module.exports = function (eleventyConfig) {
     templateFormats: ["njk", "md", "html"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
+    pathPrefix: pathPrefix,
   };
 };
