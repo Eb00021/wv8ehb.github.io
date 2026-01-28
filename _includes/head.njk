@@ -1,4 +1,4 @@
-<link rel="icon" href="/assets/W8CUL.ico"/>
+<link rel="icon" href="{{ site.baseUrl or '' }}/assets/W8CUL.ico"/>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7857b3b7a6","applicationID":"531059","transactionName":"IQkMEBdbDVVSFBtARwAKCwdKXQ9dUh4UHRIRV1dQUA==","queueTime":0,"applicationTime":297,"agent":""};</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7857b3b7a6",applicationID:"531059"};</script>
@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://cdn.fonts.net">
 <link rel="preconnect" href="https://static.wvu.edu">
 <link href="https://cdn.fonts.net/kit/b339d500-35c3-11ed-aaf7-06b70d83f6b0/b339d500-35c3-11ed-aaf7-06b70d83f6b0.css" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css" type="text/css">
-<script src="/javascripts/1756389273/meom-wvu-site-navigation--custom.js" type="module"></script>
+<link rel="stylesheet" href="{{ site.baseUrl or '' }}/styles.css" type="text/css">
+<script src="{{ site.baseUrl or '' }}/javascripts/1756389273/meom-wvu-site-navigation--custom.js" type="module"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{ page.url | url }}">
-<meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseUrl or '' }}{{ site.ogImage }}">
 <meta property="og:title" content="{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }} | Home{% endif %}">
 <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
 

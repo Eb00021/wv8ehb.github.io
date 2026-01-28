@@ -9,7 +9,13 @@ npm install
 npm run build
 ```
 
-Output is in `_site/`. Deploy that folder to your host (e.g. Cloudflare Pages).
+Output is in `_site/`. Deploy that folder to your host.
+
+### GitHub Pages (e.g. eb00021.github.io/wv8ehb.github.io)
+
+1. In **Settings → Pages**, set **Source** to **GitHub Actions**.
+2. Push to `main` or `dev`; the workflow builds 11ty and deploys `_site/`.
+3. Ensure `_data/site.json` has `"baseUrl": "/wv8ehb.github.io"` and `"url": "https://eb00021.github.io/wv8ehb.github.io"` so asset and link URLs work from that path.
 
 ```bash
 npm run serve

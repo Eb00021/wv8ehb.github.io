@@ -13,16 +13,16 @@
 
         <ul id="wvu-site-nav__items"
             class="wvu-site-nav__items js-wvu-site-nav-items position-static list-unstyled d-lg-flex align-items-lg-center flex-lg-wrap mb-0">
-            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'home' %}aria-current="page" {% endif %}href="/">Home</a></li>
-            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'projects' %}aria-current="page" {% endif %}href="/projects">Projects</a></li>
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'home' %}aria-current="page" {% endif %}href="{{ site.baseUrl or '' }}/">Home</a></li>
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'projects' %}aria-current="page" {% endif %}href="{{ site.baseUrl or '' }}/projects">Projects</a></li>
             <li class="wvu-site-nav__menu-item-has-children position-relative d-lg-flex">
-                <a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'shack' %}aria-current="page" {% endif %}href="/shack/equipment">The Shack</a>
+                <a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'shack' %}aria-current="page" {% endif %}href="{{ site.baseUrl or '' }}/shack/equipment">The Shack</a>
                 <ul class="wvu-site-nav__sub-menu small bg-wvu-accent--blue-dark list-unstyled ms-2 ms-lg-0 wvu-site-nav__sub-menu--level-1">
-                    <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" href="/shack/equipment">Equipment</a></li>
+                    <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" href="{{ site.baseUrl or '' }}/shack/equipment">Equipment</a></li>
                     <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" href="https://wvuarc.statler.wvu.edu/hamclock/">Hamclock</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'officers' %}aria-current="page" {% endif %}href="/officers">Officers</a></li>
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'officers' %}aria-current="page" {% endif %}href="{{ site.baseUrl or '' }}/officers">Officers</a></li>
         </ul>
 
         <div class="d-flex align-items-center">

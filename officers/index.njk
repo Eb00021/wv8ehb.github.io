@@ -8,7 +8,7 @@ bodyClass: contact-index page--140856 page--contact-index
 <section class="wvu-breadcrumbs py-2 w-100 position-absolute wvu-z-index-breadcrumbs" aria-label="Breadcrumb Links">
   <div class="container position-relative small">
     <ul class="wvu-z-index-content wvu-slash-list ps-0 mb-0 d-inline-block">
-      <li><a href="/">Home</a></li>
+      <li><a href="{{ site.baseUrl or '' }}/">Home</a></li>
       <li class="active">Officers</li>
     </ul>
   </div>
@@ -34,7 +34,7 @@ bodyClass: contact-index page--140856 page--contact-index
             <div class="row">
               <div class="col-lg-3">
                 <div class="mb-2 position-relative portrait-container">
-                  <img class="rounded-circle shadow mb-2" src="{{ officer.image }}" alt="Portrait of ARC {{ officer.title }}">
+                  <img class="rounded-circle shadow mb-2" src="{{ site.baseUrl or '' }}{{ officer.image }}" alt="Portrait of ARC {{ officer.title }}">
                 </div>
               </div>
               <div class="col-lg-9">
@@ -51,7 +51,7 @@ bodyClass: contact-index page--140856 page--contact-index
                   </p>
                 </div>
                 <p class="">{{ officer.blurb }}</p>
-                <a class="btn btn-primary btn-sm" href="/officers/{{ officer.id }}">View Bio<span class="visually-hidden">: Profile</span></a>
+                <a class="btn btn-primary btn-sm" href="{{ site.baseUrl or '' }}/officers/{{ officer.id }}">View Bio<span class="visually-hidden">: Profile</span></a>
               </div>
             </div>
           </div>

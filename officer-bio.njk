@@ -13,8 +13,8 @@ bodyClass: contact-index page--140856 page--contact-index
 <section class="wvu-breadcrumbs py-2 w-100 position-absolute wvu-z-index-breadcrumbs" aria-label="Breadcrumb Links">
   <div class="container position-relative small">
     <ul class="wvu-z-index-content wvu-slash-list ps-0 mb-0 d-inline-block">
-      <li><a href="/">Home</a></li>
-      <li><a href="/officers">Officers</a></li>
+      <li><a href="{{ site.baseUrl or '' }}/">Home</a></li>
+      <li><a href="{{ site.baseUrl or '' }}/officers">Officers</a></li>
       <li class="active">{{ officer.title }}</li>
     </ul>
   </div>
@@ -37,7 +37,7 @@ bodyClass: contact-index page--140856 page--contact-index
         <div class="row">
           <div class="col-xl-10 me-xl-auto">
             <div class="mb-1">
-              <img alt="Portrait of ARC {{ officer.title }}" class="card-img-top w-100" src="{{ officer.image }}">
+              <img alt="Portrait of ARC {{ officer.title }}" class="card-img-top w-100" src="{{ site.baseUrl or '' }}{{ officer.image }}">
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ bodyClass: contact-index page--140856 page--contact-index
             <ul class="nav flex-column border-start border-muted ps-1 mb-3">
               {% for o in officersSorted %}
               <li class="nav-item">
-                <a class="nav-link text-decoration-none {% if o.id == officer.id %}active fw-bold{% endif %}" href="/officers/{{ o.id }}">{{ o.title }}</a>
+                <a class="nav-link text-decoration-none {% if o.id == officer.id %}active fw-bold{% endif %}" href="{{ site.baseUrl or '' }}/officers/{{ o.id }}">{{ o.title }}</a>
               </li>
               {% endfor %}
             </ul>
