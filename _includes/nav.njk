@@ -1,0 +1,43 @@
+<nav aria-label="Main navigation" id="nav-primary"
+     class="wvu-site-nav bg-wvu-accent--blue-dark navbar navbar-expand-lg p-0 navbar-dark w-100">
+    <div class="container">
+        <button aria-controls="wvu-site-nav__items" aria-expanded="false" type="button"
+                class="wvu-site-nav__toggle js-wvu-site-nav-toggle border-0 bg-wvu-accent--blue-dark text-white position-relative ps-0 pe-2 d-flex d-lg-none align-items-center">
+            <span aria-hidden="true" class="wvu-hamburger js-wvu-hamburger">
+                <span class="wvu-hamburger__line wvu-hamburger__line--top js-wvu-hamburger__line--top"></span>
+                <span class="wvu-hamburger__line wvu-hamburger__line--middle"></span>
+                <span class="wvu-hamburger__line wvu-hamburger__line--bottom js-wvu-hamburger__line--bottom"></span>
+            </span>
+            <span class="js-wvu-site-nav-toggle-text">Open Menu</span>
+        </button>
+
+        <ul id="wvu-site-nav__items"
+            class="wvu-site-nav__items js-wvu-site-nav-items position-static list-unstyled d-lg-flex align-items-lg-center flex-lg-wrap mb-0">
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'home' %}aria-current="page" {% endif %}href="/">Home</a></li>
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'projects' %}aria-current="page" {% endif %}href="/projects">Projects</a></li>
+            <li class="wvu-site-nav__menu-item-has-children position-relative d-lg-flex">
+                <a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'shack' %}aria-current="page" {% endif %}href="/shack/equipment">The Shack</a>
+                <ul class="wvu-site-nav__sub-menu small bg-wvu-accent--blue-dark list-unstyled ms-2 ms-lg-0 wvu-site-nav__sub-menu--level-1">
+                    <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" href="/shack/equipment">Equipment</a></li>
+                    <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" href="https://wvuarc.statler.wvu.edu/hamclock/">Hamclock</a></li>
+                </ul>
+            </li>
+            <li><a class="nav-link px-1 py-2 fw-normal flex-grow-1" {% if navCurrent == 'officers' %}aria-current="page" {% endif %}href="/officers">Officers</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+            <ul class="list-inline mb-0 me-2">
+                <li class="list-inline-item">
+                    <a class="mb-0 text-decoration-none text-white-50" href="https://discord.gg/mnHW67hShz">
+                        <span class="fab fa-discord"></span><span class="visually-hidden">Discord</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="mb-0 text-decoration-none text-white-50" href="https://www.instagram.com/w8cul">
+                        <span class="fab fa-instagram"></span><span class="visually-hidden">Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

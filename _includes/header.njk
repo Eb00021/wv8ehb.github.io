@@ -1,0 +1,54 @@
+<div class="cs-injection"></div>
+<header aria-label="masthead">
+    <a class="visually-hidden-focusable" href="#wvu-main-content">Skip to main content</a>
+
+    <section aria-labelledby="aria__emergency-alert-1-label" id="js-emergency-alert"
+             class="d-none alert alert-danger mb-0 py-2 px-0 rounded-0 border-0" role="alert" aria-atomic="true"
+             data-disable-emergency-alert="" data-emergency-alert-json-feed="">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6 col-xl-5 mx-auto">
+                    <h2 class="wvu-shout text-center" id="aria__emergency-alert-1-label">
+                        <span aria-hidden="true" class="fa-solid fa-triangle-exclamation"></span>
+                        Active Campus Alert
+                    </h2>
+                    <div id="js-emergency-alert__events"></div>
+                    <p class="mb-0 small">For more information visit: <a id="js-emergency-alert-domain"
+                                                                         class="alert-link"
+                                                                         href="https://emergency.wvu.edu/">emergency.wvu.edu</a>
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <button type="button" data-bs-dismiss="alert" aria-label="Close Emergency Alerts box"
+                            class="border-0 rounded-circle"
+                            style="width: 26px; height: 26px; background-color: #f5c5c1;">
+                        <span class="fa-sharp fa-solid fa-xmark position-relative" aria-hidden="true"
+                              style="color: #83202a;"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="js-masthead" class="wvu-masthead bg-wvu-blue">
+        <div class="container">
+            <div class="row">
+                <div class="align-self-center col">
+                    <a class="d-flex position-relative my-3 align-items-center justify-content-center justify-content-lg-start text-decoration-none text-white"
+                       href="/">
+                        <span class="visually-hidden">West Virginia University</span>
+                        <span class="wvu-logo-lockup mt-n1">Amateur Radio Club | W8CUL</span>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column">
+                    <div class="px-0 flex-grow-1 d-flex align-content-center justify-content-center justify-content-lg-end my-2">
+                        <a href="{{ site.url }}/membership/join" class="mb-3 mb-lg-0 align-self-center btn mb-1 btn-outline-wvu-accent--blue-light">Join</a>
+                        <a href="{{ site.url }}/contact" class="mb-3 mb-lg-0 align-self-center btn mb-1 btn-outline-wvu-gold ms-1">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "nav.njk" %}
+</header>

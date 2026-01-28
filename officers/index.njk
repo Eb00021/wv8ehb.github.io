@@ -1,0 +1,63 @@
+---
+layout: base.njk
+title: Officers
+navCurrent: officers
+bodyClass: contact-index page--140856 page--contact-index
+---
+
+<section class="wvu-breadcrumbs py-2 w-100 position-absolute wvu-z-index-breadcrumbs" aria-label="Breadcrumb Links">
+  <div class="container position-relative small">
+    <ul class="wvu-z-index-content wvu-slash-list ps-0 mb-0 d-inline-block">
+      <li><a href="/">Home</a></li>
+      <li class="active">Officers</li>
+    </ul>
+  </div>
+</section>
+
+<div class="py-3 wvu-z-index-content pb-3 bg-wvu-neutral--dark-gray bg-wvu-accent--blue-dark wvu-bg-vignetting wvu-bg-blend-mode-luminosity--80 wvu-bg-position-center">
+  <div class="container position-relative wvu-z-index-content">
+    <div class="row align-items-stretch">
+      <div class="col-12 col-md-8 mt-3">
+        <h1 id="backpage-header-1-label" class="display-4 helvetica-neue-bold mb-0 text-white">Officers</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-5 text-center">
+  <div class="wvu-z-index-content">
+    <div class="container wvu-z-index-content">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          {% for officer in officersSorted %}
+          <div class="mb-4 text-start">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="mb-2 position-relative portrait-container">
+                  <img class="rounded-circle shadow mb-2" src="{{ officer.image }}" alt="Portrait of ARC {{ officer.title }}">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <h2 class="card-title h2 d-block wvu-shout wvu-bar mb-2 text-decoration-none text-wvu-blue">
+                  {{ officer.name }}{% if officer.callsign %} - {{ officer.callsign }}{% endif %}
+                </h2>
+                <div class="mb-2">
+                  <p>
+                    <span class="d-block h5 mb-1 helvetica-neue-bold text-uppercase">{{ officer.title }}</span>
+                    {% if officer.major %}<span class="d-block mb-1 helvetica-neue"><strong>Major: </strong>{{ officer.major }}</span>{% endif %}
+                    {% if officer.phone %}<span class="d-block mb-0"><span class="fa-solid fa-phone" aria-hidden="true"></span> <a href="tel:{{ officer.phone | replace(' ', '') | replace('(', '') | replace(')', '') | replace('-', '') }}">{{ officer.phone }}</a></span>{% endif %}
+                    {% if officer.email %}<span class="d-block mb-0"><span class="fa-solid fa-envelope" aria-hidden="true"></span> <a href="mailto:{{ officer.email }}">{{ officer.email }}</a></span>{% endif %}
+                    {% if officer.building and officer.buildingUrl %}<span class="d-block mb-0"><span class="fa-solid fa-building" aria-hidden="true"></span> <a href="{{ officer.buildingUrl }}">{{ officer.building }}</a></span>{% endif %}
+                  </p>
+                </div>
+                <p class="">{{ officer.blurb }}</p>
+                <a class="btn btn-primary btn-sm" href="/officers/{{ officer.id }}">View Bio<span class="visually-hidden">: Profile</span></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

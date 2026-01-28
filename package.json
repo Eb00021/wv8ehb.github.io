@@ -1,0 +1,12 @@
+{
+  "name": "w8cul-website",
+  "version": "1.0.0",
+  "description": "WVU Amateur Radio Club website",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
